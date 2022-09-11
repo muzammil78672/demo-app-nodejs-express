@@ -34,6 +34,10 @@ server.use((err, req, res, next) => {
   });
 });
 
+router.get("/", (req, res) => {
+  res.send("Express server started!!!");
+});
+
 server.listen(PORT, () => {
   db.connect();
   console.log("Server started on PORT:", PORT);
